@@ -20,7 +20,7 @@ class AES {
       ArgumentError.checkNotNull(this._iv);
       if (this._iv.length != 16) throw ArgumentError("Iv size should be 16 bytes: actual is ${_iv.length}");
     }
-    if (this._key.length != 16 && this._key.length != 32)
+    if (this._key.length != 16 || this._key.length != 32)
       throw ArgumentError("Key size should be 16 bytes(AES-128) or 32 bytes(AES-256): actual is ${_key.length}");
   }
 
